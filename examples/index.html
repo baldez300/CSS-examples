@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Formatting a biography</title>
+    <link rel="stylesheet" href="styles.css">
+    <style></style>
+  </head>
+
+  <body>
+    <!-- <script type="text/javascript" src="scripts.js"></script> -->
+
+    <h1>Jane Doe</h1>
+    <div class="job-title">Web Developer</div>
+    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+    </p>
+
+    <article>
+      <p>The following for example selects paragraphs that are direct children of <strong>#article</strong> elements using the child combinator (>):</p>
+      <p>Balde</p>
+      <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+            melon azuki bean garlic.
+      </p>
+    </article>
+
+    <h2>Contact information</h2>
+    <ul>
+      <li>Email:
+        <a href="mailto:jane@example.com">jane@example.com</a>
+      </li>
+      <li>Web:
+        <a href="http://example.com">http://example.com</a>
+      </li>
+      <li>Tel: 123 45678</li>
+    </ul>
+
+    <hr>
+
+    <h1>The Unordered List element Styles</h1>
+
+    <ul class="main">
+      <li>Milk</li>
+      <li>Cheese
+        <ul class="special">
+          <li>Blue cheese</li>
+          <li>Feta</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h1> Selectors which have the specificity that we have given them</h1>
+    <div id="outer" class="container">
+      <div id="inner" class="container">
+          <ul>
+              <li class="nav"><a href="#">One</a></li>
+              <li class="nav"><a href="#">Two</a></li>
+              <li class="nav"><a href="#">Three</a></li>
+              <li class="nav"><a href="#">Four</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <h1>There is a special piece of CSS that you can use to overrule all of the above calculations</h1>
+
+    <p class="better">This is a paragraph.</p>
+    <p class="better" id="winning">One selector to rule them all!</p>
+
+    <hr>
+
+    <h1>Controlling inheritance</h1>
+
+    <ul class="nav-2">
+      <li>Default <a href="#">link</a> color</li>
+      <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+      <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+      <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+      <li class="my-class-4">Revert the <a href="#">link</a> color</li>
+   </ul>
+
+   <hr>
+
+   <h1>Attribute presence and value selectors</h1>
+
+   <ul>
+    <li>Item 1</li>
+    <li class="a">Item 2</li>
+    <li class="a b">Item 3</li>
+    <li class="ab">Item 4</li>
+   </ul>
+
+   <hr>
+   <h1>Attribute substring matching selectors</h1>
+
+   <ul>
+    <li class="o">Item 1</li>
+    <li class="ob">Item 2</li>
+    <li class="bco">Item 3</li>
+    <li class="bcobc">Item 4</li>
+   </ul>
+
+   <hr>
+   <h1>Case-insensitivity</h1>
+    <ul>
+        <li class="u">Item 1</li>
+        <li class="U">Item 2</li>
+        <li class="Ub">Item 3</li>
+    </ul>
+
+   <hr>
+
+   <h1 class="highlight">Targeting classes on particular elements</h1>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis <span class="highlight">kohlrabi welsh onion</span> daikon amaranth tatsoi tomatillo
+    melon azuki bean garlic.</p>
+
+    <hr>
+
+    <div class="notebox">
+      This is an informational note.
+    </div>
+    
+    <div class="notebox warning">
+        This note shows a warning.
+    </div>
+    
+    <div class="notebox danger">
+        This note shows danger!
+    </div>
+    
+    <div class="danger test">
+        This won't get styled — it also needs to have the notebox class
+    </div>
+
+    <hr>
+    <h1>The :only-child CSS</h1>
+
+    <div>
+      <div>I am an only child.</div>
+    </div>
+    
+    <div>
+      <div>I am the 1st sibling.</div>
+      <div>I am the 2nd sibling.</div>
+      <div>I am the 3rd sibling, <div>but this is an only child.</div></div>
+    </div>
+
+    <hr>
+    <h1>The :invalid CSS pseudo-class</h1>
+
+    <form>
+      <div class="field">
+        <label for="url_input">Enter a URL:</label>
+        <input type="url" id="url_input">
+      </div>
+    
+      <div class="field">
+        <label for="email_input">Enter an email address:</label>
+        <input type="email" id="email_input" required>
+      </div>
+    </form>
+
+    <hr>
+    <h1>The :focus, User-action pseudo classes</h1>
+
+    <input class="red-input" value="I'll be red when focused."><br>
+    <input class="blue-input" value="I'll be blue when focused.">
+
+    <hr>
+    <h1>What is a pseudo-element?</h1>
+
+    <article>
+      <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+              melon azuki bean garlic.</p>
+  
+      <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+              greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+    </article>
+
+    <hr>
+    <h1>Generating content with ::before and ::after</h1>
+
+    <p class="box-2">Content in the box in my HTML page.</p>
+    <p class="box-3">Content in the box in my HTML page.</p>
+
+    <hr>
+    
+    <h3>To-do list
+      In this example we will create a simple to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.
+      
+    </h3>
+
+    <ul>
+      <li>Buy milk</li>
+      <li>Take the dog for a walk</li>
+      <li>Exercise</li>
+      <li>Write code</li>
+      <li>Play music</li>
+      <li>Relax</li>
+    </ul>
+
+    <!-- <hr>
+    <h1></h1> -->
+
+    <script>
+      var list = document.querySelector('ul');
+      list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+          ev.target.classList.toggle('done');
+        }
+      }, false);
+
+    </script>
+
+      <hr>
+      <h1> Checked radio buttons</h1>
+
+    <div>
+      <input type="radio" name="my-input" id="yes">
+      <label for="yes">Yes</label>
+    
+      <input type="radio" name="my-input" id="no">
+      <label for="no">No</label>
+    </div>
+    
+    <div>
+      <input type="checkbox" name="my-checkbox" id="opt-in">
+      <label for="opt-in">Check me!</label>
+    </div>
+    
+    <select name="my-select" id="fruit">
+      <option value="opt1">Apples</option>
+      <option value="opt2">Grapes</option>
+      <option value="opt3">Pears</option>
+    </select>
+
+    <hr>
+    <h1>input type="range"</h1>
+
+    <div>
+      <input type="range" id="volume" name="volume"
+             min="0" max="11">
+      <label for="volume">Volume</label>
+    </div>
+    
+    <div>
+      <input type="range" id="cowbell" name="cowbell" 
+             min="0" max="100" value="90" step="10">
+      <label for="cowbell">Cowbell</label>
+    </div>
+
+    <hr>
+    <h1>input type="color"</h1>
+
+    <p>Choose your monster's colors:</p>
+
+    <div>
+        <input type="color" id="head" name="head"
+              value="#e66465">
+        <label for="head">Head</label>
+    </div>
+
+    <div>
+        <input type="color" id="body" name="body"
+                value="#f6b73c">
+        <label for="body">Body</label>
+    </div>
+
+    <hr>
+    <h1>input type="button"</h1>
+
+    <input class="favorite styled"
+       type="button"
+       value="Add to favorites">
+
+    <hr>
+    <h1>input type="file"</h1> 
+
+    <label for="avatar">Choose a profile picture:</label>
+
+  <input type="file"
+        id="avatar" name="avatar"
+        accept="image/png, image/jpeg">
+
+  <hr>
+  <h2>Hidden the line below for tokens or id nums for the Developer</h2>     
+  <input id="prodId" name="prodId" type="hidden" value="xm234jq"> 
+
+
+  <hr>
+  <h1>input type="search"</h1> 
+
+  <label for="site-search">Search the site:</label>
+  <input type="search" id="site-search" name="q"
+        aria-label="Search through site content">
+
+  <button>Search</button>
+
+  <hr>
+  <h1>input type="URL"</h1> 
+
+  <label for="url">Enter an https:// URL:</label>
+
+  <input type="url" name="url" id="url"
+       placeholder="https://example.com"
+       pattern="https://.*" size="30"
+       required>
+
+  <hr>
+  <h1>:last-child</h1> 
+  
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3
+      <ul>
+        <li>Item 3.1</li>
+        <li>Item 3.2</li>
+        <li>Item 3.3</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+  <h1>Indicating valid and invalid form fields</h1>
+  
+  <div>
+    <label for="fname">First name *: </label>
+    <input id="fname" name="fname" type="text" required>
+    <span></span>
+  </div>
+
+  <hr>
+  <h1>:target</h1>
+
+  <ul>
+    <li><a href="#example1">Open example #1</a></li>
+    <li><a href="#example2">Open example #2</a></li>
+  </ul>
+  
+  <div class="lightbox" id="example1">
+    <figure>
+      <a href="#" class="close"></a>
+      <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+    </figure>
+  </div>
+  
+  <div class="lightbox" id="example2">
+    <figure>
+      <a href="#" class="close"></a>
+      <figcaption>Cras risus odio, pharetra nec ultricies et,
+        mollis ac augue. Nunc et diam quis sapien dignissim auctor.
+        Quisque quis neque arcu, nec gravida magna.</figcaption>
+    </figure>
+  </div>
+
+  <hr>
+  <h3>The :target pseudo-class can be used to highlight the portion of a page that has been linked to from a table of contents.</h3>
+  <ol>
+  <li><a href="#p1">Jump to the first paragraph!</a></li>
+  <li><a href="#p2">Jump to the second paragraph!</a></li>
+  <li><a href="#nowhere">This link goes nowhere,
+    because the target doesn't exist.</a></li>
+  </ol>
+
+  <h3>My Fun Article</h3>
+  <p id="p1">You can target <i>this paragraph</i> using a
+    URL fragment. Click on the link above to try out!</p>
+  <p id="p2">This is <i>another paragraph</i>, also accessible
+    from the links above. Isn't that delightful?</p>
+
+    <hr>
+    <h1>::first-letter (:first-letter)</h1> 
+    
+    <h2>My heading</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+      ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+      dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+
+    <hr>
+    <h1>Child combinator</h1>
+
+    <ul>
+      <li>Unordered item</li>
+      <li>Unordered item
+          <ol>
+              <li>Item 1</li>
+              <li>Item 2</li>
+          </ol>
+      </li>
+    </ul>
+
+    <hr>
+    <h1>Just for an assessment e.g</h1>
+
+    <div class="container">
+      <p>Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+      <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+      <table>
+        <tr>
+          <th>Fruits</th>
+          <th>Vegetables</th>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>Potato</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>Carrot</td>
+        </tr>
+        <tr>
+          <td>Tomato</td>
+          <td>Parsnip</td>
+        </tr>
+        <tr>
+          <td>Kiwi</td>
+          <td>Onion</td>
+        </tr>
+        <tr>
+          <td>Banana</td>
+          <td>Beet</td>
+        </tr>
+      </table>
+    </div>
+
+    <hr>
+    <h1>Playing with box models</h1>
+
+    <div class="box">I use the standard box model.</div>
+    <div class="box alternate">I use the alternate box model.</div>
+    
+    <hr>
+    <h2>Navigate to <a href="index-2.html">index-2. Box models</a></h2>
+    
+    <hr>
+    <h2>Navigate to <a href="index-3.html">index-3. background-repeat</a></h2>
+    
+    <hr>
+    <h2>Navigate to <a href="index-4.html">index-4. background-clip</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-5.html">index-5. Backgrounds and Borders</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-6.html">index-6. Backgrounds and Borders-2</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-7.html">index-7. Writing modes</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-8.html">index-8. Tables Task</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-9.html">index-9. Tables Task-2</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-10.html">index-10. Form editing</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-11.html">index-11. Styling lists</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-12.html">index-12. Web font example</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-13.html">index-13. Web font example-2 + flex-direction:</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-14.html">index-14. Web font example-3</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-15.html">index-15. Flexbox 0</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-16.html">index-16. Flexbox 1</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-17.html">index-17. Flexbox 2</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-18.html">index-18. Flexbox 3</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-19.html">index-19. Flexbox 4</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-20.html">index-20. Flexbox 5</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-21.html">index-21. Flexbox 5</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-22.html">index-22. CSS Grid starting point</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-23.html">index-23. CSS Grid Line-based placement</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-24.html">index-24. A CSS Grid, grid framework</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-25.html">index-25. Test your skills: Grid Layou</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-26.html">index-26. Floats</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-27.html">index-27. Positioning 1</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-28.html">index-28. Positioning 2</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-29.html">index-29. Test your skills: position</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-30.html">index-30. Multiple-column layout</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-31.html">index-31. Responsive design</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-32.html">index-32. The CSS Media Query</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-33.html">index-33. The CSS mobile-first layout</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-34.html">index-34. The CSS mobile-second layout</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-35.html">index-35. Media Queries and Responsive Design.</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-36.html">index-36. Media Queries and Responsive Design 2.</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-37.html">index-37. CSS A two column layout.</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-38.html">index-38. CSS: A simple fixed width grid. 1</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-39.html">index-39. CSS: A simple fixed width grid. 2</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-40.html">index-40. CSS: Third party grid systems</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-41.html">index-41. CSS: Starting to use Grid in production</a></h2>
+
+    <hr>
+    <h2>Navigate to <a href="index-42.html">index-42. CSS: Fundamental layout comprehension.</a></h2>
+  </body>
+</html>

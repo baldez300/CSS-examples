@@ -1,0 +1,251 @@
+
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Grid: task 2</title>
+
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        html {
+            background-color: #ddd0b8;
+        }
+        /*======================  Grid Layout One. ==*/
+        .grid-1 > div {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(227, 232, 207);
+            border: 2px solid rgb(121, 227, 79);
+        }
+
+      .grid-1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(50px, auto);
+            gap: 20px;
+        }
+      
+        /*======================  Grid Layout Two ==*/
+      body {
+        /* background-color: #fff; */
+        color: #333;
+        font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      .grid-2 > * {
+        border-radius: .5em;
+        color: #fff;
+        padding: .5em;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        gap: 10px;
+      }
+
+      .item1 {
+        background-color: rgba(74,102,112,.7);
+        border: 5px solid rgba(74,102,112,1);
+      }
+
+      .item2 {
+        background-color: rgba(214,162,173,.7);
+        border: 5px solid rgba(214,162,173,1);
+      }
+
+      .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* This causes the first item to display on top.*/
+            z-index: 1;
+        }
+
+        .item2 {
+            grid-column-start: 2;
+            grid-column-end: 8;
+            grid-row-start: 2;
+            grid-row-end: 6;
+        }
+
+        /*====================== Grid Layout Three. ===*/
+        .grid-3 > div {
+            border-radius: 7px;
+            padding: 10px;
+            background-color: rgb(200, 248, 8);
+            border: 2px solid rgb(51, 139, 16);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        /*Now the grid-area and grid-template-areas properties to lay the items out.*/
+        .grid-3 {
+            display: grid;
+            grid-template-areas:
+                "one one"
+                "two three"
+                ". four";
+            grid-template-columns: 2fr 3fr;
+            gap: 20px;
+        }
+
+        .one {
+            grid-area: one;
+        }
+
+        .two {
+            grid-area: two;
+        }
+
+        .three {
+            grid-area: three;
+        }
+
+        .four {
+            grid-area: four;
+        }
+
+        /*====================== Grid Layout Four. ==*/
+        .card {
+            display: grid;
+            grid-template-rows: 200px min-content;
+        }
+
+        .card > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tags {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tags > * {
+            background-color: #999;
+            color: #fff;
+            padding: 0.2em 0.8em;
+            border-radius: 0.2em;
+            font-size: 80%;
+            margin: 5px;
+        }
+
+        .container {
+            /* display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px; */
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+
+        .tags {
+            display: flex;
+            flex-flow: row wrap;
+            /* align-items: center;
+            justify-content: space-around; */
+
+            /* display: inline-grid;
+            grid-template-columns: auto auto; */
+
+            /* grid-auto-rows: minmax(50px, auto);
+            gap: 10px; */
+        }
+
+        li {
+            flex: 1
+        }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h2>Grid Layout One.</h2>
+    <div class="grid-1">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+    </div>
+      
+
+    <hr>
+    <h2>Grid Layout Two.</h2>
+    <div class="grid-2">
+      <div class="item1">One</div>
+      <div class="item2">Two</div>
+    </div>
+
+    <hr>
+    <h2>Grid Layout Three.</h2>
+    <div class="grid-3">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+    </div>
+
+    <hr>
+    <h2>Grid Layout Four.</h2>
+    <div class="container">
+        <div class="card">
+          <img src="./images-3/balloons1.jpg" alt="a single red balloon">
+          <ul class="tags">
+            <li>balloon</li>
+            <li>red</li>
+            <li>sky</li>
+            <li>blue</li>
+            <li>Hot air balloon</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img src="./images-3/balloons2.jpg" alt="balloons over some houses">
+          <ul class="tags">
+            <li>balloons</li>
+            <li>houses</li>
+            <li>train</li>
+            <li>harborside</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img src="./images-3/balloons3.jpg" alt="close-up of balloons inflating">
+          <ul class="tags">
+            <li>balloons</li>
+            <li>inflating</li>
+            <li>green</li>
+            <li>blue</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img src="./images-3/balloons4.jpg" alt="a balloon in the sun">
+          <ul class="tags">
+            <li>balloon</li>
+            <li>sun</li>
+            <li>sky</li>
+            <li>summer</li>
+            <li>bright</li>
+          </ul>
+        </div>
+    </div>
+      
+
+  </body>
+
+</html>

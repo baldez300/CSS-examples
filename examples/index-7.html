@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Formatting CSS boxes</title>
+    <link rel="stylesheet" href="styles-7.css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <style></style>
+  </head>
+
+    <body>
+        <h1>Using writing mode🤔🤔🤔 🧑🏾‍💻🧑🏾‍💻 👍🏾👍🏾👍🏾</h1>
+        <table>
+            <tr>
+              <th>Value</th>
+              <th>Vertical script</th>
+              <th>Horizontal (LTR) script</th>
+              <th>Horizontal (RTL) script</th>
+              <th>Mixed script</th>
+            </tr>
+            <tr>
+              <td>horizontal-tb</td>
+              <td class="example Text1"><span>我家没有电脑。</span></td>
+              <td class="example Text1"><span>Example text</span></td>
+              <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
+              <td class="example Text1"><span>1994年に至っては</span></td>
+            </tr>
+            <tr>
+              <td>vertical-lr</td>
+              <td class="example Text2"><span>我家没有电脑。</span></td>
+              <td class="example Text2"><span>Example text</span></td>
+              <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
+              <td class="example Text2"><span>1994年に至っては</span></td>
+            </tr>
+            <tr>
+              <td>vertical-rl</td>
+              <td class="example Text3"><span>我家没有电脑。</span></td>
+              <td class="example Text3"><span>Example text</span></td>
+              <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
+              <td class="example Text3"><span>1994年に至っては</span></td>
+            </tr>
+            <tr>
+              <td>sideways-lr</td>
+              <td class="example Text4"><span>我家没有电脑。</span></td>
+              <td class="example Text4"><span>Example text</span></td>
+              <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
+              <td class="example Text4"><span>1994年に至っては</span></td>
+            </tr>
+            <tr>
+              <td>sideways-rl</td>
+              <td class="example Text5"><span>我家没有电脑。</span></td>
+              <td class="example Text5"><span>Example text</span></td>
+              <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
+              <td class="example Text5"><span>1994年に至っては</span></td>
+            </tr>
+        </table>
+          
+           
+        <hr>
+        <h3>Writing modes and block and inline layout</h3>
+        <div class="wrapper">
+            <div class="box horizontal">
+              <h2>Heading</h2>
+              <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+            </div>
+            <div class="box vertical">
+              <h2>Heading</h2>
+              <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+            </div>
+          </div>
+    
+        </div>
+
+        <hr>
+        <h1>Setting block start margin || margin-block-start</h1>
+        <div class="one">
+            <p class="exampleText">Example text</p>
+        </div>
+
+        <hr>
+        <h1>Border with vertical text || border-block-end</h1>
+        <div class="two">
+            <p class="exampleText-2">Example text</p>
+        </div>
+
+        <hr>
+        <h1>Logical margin, border, and padding properties</h1>
+        <div class="wrapper">
+            <div class="box-3 physical">
+              <h2>Physical Properties</h2>
+              <p>A paragraph. Demonstrating Logical Properties in CSS.</p>
+            </div>
+            <div class="box-3 logical">
+              <h2 class="h2-three">Logical Properties</h2>
+              <p>A paragraph. Demonstrating Logical Properties in CSS.</p>
+            </div>
+        </div>
+
+        <hr>
+        <h1>Logical values</h1>
+        <div class="wrapper">
+            <div class="box-4">
+              <img src="./images/star-1.png" alt="star">
+              <p>This box uses logical properties. The star image has been floated inline-start, it also has a margin on the inline-end and block-end.</p>
+            </div>
+        </div>
+
+        <hr>
+        <h1>Use logical versions of the margin, border, and padding properties.</h1>
+        <div class="box-5">Horizontal.</div>
+        <div class="box-5 vertical">Vertical.</div>
+    
+
+        <hr>
+        <h1>word-break</h1>
+        <p>1. <code>word-break: normal</code></p>
+        <p class="normal narrow">This is a long and
+        Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+        グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+
+        <p>2. <code>word-break: break-all</code></p>
+        <p class="breakAll narrow">This is a long and
+        Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+        グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+
+        <p>3. <code>word-break: keep-all</code></p>
+        <p class="keepAll narrow">This is a long and
+        Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+        グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+
+        <p>4. <code>word-break: break-word</code></p>
+        <p class="breakWord narrow">This is a long and
+        Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+        グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+
+        <hr>
+        <h1>Images!🤔</h1>
+        <div class="box image"></div>
+        <div class="box gradient"></div>  
+
+        <hr>
+        <h1>Using RGBA colors!🤔</h1>
+        <div class="wrapper-2">
+            <div class="box three">rgba(2, 121, 139, .3)</div>
+            <div class="box four">rgba(197, 93, 161, .7)</div>
+            <div class="box five">rgba(18, 138, 125, .9)</div>
+        </div>
+
+        <hr>
+        <h1>Using HSLA(Hue, Saturation, Lightness, Alpha) colors!🤔</h1>
+        <div class="wrapper-3">
+            <div class="box six">hsla(188, 97%, 28%, .3)</div>
+            <div class="box seven">hsla(321, 47%, 57%, .7)</div>
+            <div class="box eight">hsla(174, 77%, 31%, .9)</div>
+        </div>
+
+        <hr>
+        <h1>Position!🤔</h1>
+        <div class="box-6"></div> 
+
+        <hr>
+        <h1>Strings and identifiers!🤔</h1>
+        <div class="box-7">
+            <p class="box">Content in the box in my HTML page.</p>
+        </div> 
+
+        <hr>
+        <h1>Strings and identifiers in a deep way!🤔</h1>
+        <div class="arrow_box"></div>
+        <hr>
+        <div class="arrow_box"></div>
+        <hr> 
+        <div class="arrow_box"></div>
+        <hr>
+        <div class="arrow_box"></div> 
+
+        <hr>
+        <h1>The calc() CSS function.</h1>
+        <div class="wrapper-4">
+            <div class="box-8">My width is calculated.</div> 
+        </div>
+              
+
+        <hr>
+        <h1>Using same colors with different functions.</h1>
+        <ul>
+            <li class="hex">hex color</li>
+            <li class="rgb">RGB color</li>
+            <li class="hsl">HSL color</li>
+            <li class="transparency">Alpha value .2</li>
+        </ul>
+
+        <hr>
+        <h1>The natural or intrinsic size of things.</h1>
+        <img id="bal1" src="./images/star-4.png" alt="star">
+
+        <hr>
+        <h1>This is the collapsed border on the element 
+            — there is no content to hold it open.</h1>
+            <div class="box-9">
+                <!-- Try adding some text inside 
+                the empty element. The border now contains 
+                that text because the height of the element is 
+                defined by the content.  -->
+            </div>    
+
+        <hr>
+        <h1>Percentage margins and padding.</h1>
+        <div class="box-10">
+            I have margin and padding set to 10% on all sides.
+        </div>
+
+        <hr>
+        <h1>min- and max- sizes.</h1>
+        <div class="wrapper">
+            <div class="box-11"></div>
+            <div class="box-11">These boxes both have a min-height set, 
+                this box has content in it which will need more space than the assigned height, 
+                and so it grows from the minimum.
+            </div>
+        </div>
+
+        <hr>
+        <h1>A common use of max-width is to cause images to scale down .</h1>
+        <div class="wrapper">
+            <div class="box-12"><img src="./images/star-4.png" alt="star" class="width"></div>
+            <div class="box-12"><img src="./images/star-4.png" alt="star" class="max"></div>
+            <div class="minibox"><img src="./images/star-4.png" alt="star" class="max"></div>
+        </div>
+              
+
+        <hr>
+        <h1>Viewport units(vh && vw). 1vh is equal to 1% of the viewport height</h1>
+        <div class="box-13">
+            BAL
+        </div>
+
+        <hr>
+        <h1>The object-fit property can help you here.</h1>
+        <div class="wrapper">
+            <div class="box-14"><img src="./images/balloons.jpg" alt="balloons" class="cover" id="bal2"></div>
+            <div class="box-14"><img src="./images/balloons.jpg" alt="balloons" class="contain" id="bal2"></div>
+        </div>
+
+        <hr>
+        <h1>Replaced elements in layout.</h1>
+        <div class="wrapper-8">
+            <img src="./images/star-4.png" alt="star">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+              
+        <hr>
+        <h1>Form elements && Styling text input elements.</h1>
+        <form>
+            <div><label for="name">Name</label>
+            <input type="text" id="name"></div>
+            <div><label for="email">Email</label>
+            <input type="email" id="email"></div>
+          
+            <div class="buttons"><input type="submit" value="Submit"></div>
+        </form>
+              
+
+        <hr>
+        <h1>A simple CSS search form.</h1>
+
+        <form method="post" action="" class="myform">
+          <div><label for="fldSearch">Keywords</label>
+          <input type="search" id="fldSearch" name="keywords">
+          <input type="submit" name="btnSubmit" value="Search"></div>
+        </form>
+
+        <hr>
+        <h1>The Table Caption element.</h1>
+        <table>
+          <caption>He-Man and Skeletor facts</caption>
+          <tr>
+              <td> </td>
+              <th scope="col" class="heman">He-Man</th>
+              <th scope="col" class="skeletor">Skeletor</th>
+          </tr>
+          <tr>
+              <th scope="row">Role</th>
+              <td>Hero</td>
+              <td>Villain</td>
+          </tr>
+          <tr>
+              <th scope="row">Weapon</th>
+              <td>Power Sword</td>
+              <td>Havoc Staff</td>
+          </tr>
+          <tr>
+              <th scope="row">Dark secret</th>
+              <td>Expert florist</td>
+              <td>Cries at romcoms</td>
+          </tr>
+        </table>
+      
+        <hr>
+        <h1>Styling our table.</h1>
+        <table>
+          <caption>A summary of the UK's most famous punk bands</caption>
+          <thead>
+            <tr>
+              <th scope="col">Band</th>
+              <th scope="col">Year formed</th>
+              <th scope="col">No. of Albums</th>
+              <th scope="col">Most famous song</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Buzzcocks</th>
+              <td>1976</td>
+              <td>9</td>
+              <td>Ever fallen in love (with someone you shouldn't've)</td>
+            </tr>
+            <tr>
+              <th scope="row">The Clash</th>
+              <td>1976</td>
+              <td>6</td>
+              <td>London Calling</td>
+            </tr>
+            <tr>
+              <th scope="row">The Damned</th>
+              <td>1976</td>
+              <td>10</td>
+              <td>Smash it up</td>
+            </tr>
+            <tr>
+              <th scope="row">Sex Pistols</th>
+              <td>1975</td>
+              <td>1</td>
+              <td>Anarchy in the UK</td>
+            </tr>
+            <tr>
+              <th scope="row">Sham 69</th>
+              <td>1976</td>
+              <td>13</td>
+              <td>If The Kids Are United</td>
+            </tr>
+            <tr>
+              <th scope="row">Siouxsie and the Banshees</th>
+              <td>1976</td>
+              <td>11</td>
+              <td>Hong Kong Garden</td>
+            </tr>
+            <tr>
+              <th scope="row">Stiff Little Fingers</th>
+              <td>1977</td>
+              <td>10</td>
+              <td>Suspect Device</td>
+            </tr>
+            <tr>
+              <th scope="row">The Stranglers</th>
+              <td>1974</td>
+              <td>17</td>
+              <td>No More Heroes</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Total albums</th>
+              <td colspan="2">77</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <hr>
+        <h1>Styling our table.</h1>
+
+    </body>
+</html>

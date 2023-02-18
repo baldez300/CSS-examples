@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fluid grid with Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* background-color: #ddd0b8; */
+        }
+        html {
+            background-color: #ddd0b8;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .media {
+            border: 2px solid #f76707;
+            border-radius: 5px;
+            background-color: #fff4e6;
+            max-width: 400px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas: "img content";
+            margin-bottom: 1em;
+        }
+        .media::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .media .image {
+            float: left;
+            width: 150px;
+            margin-right: 20px;
+        }
+        .media .text {
+            padding: 10px;
+            align-self: end;
+        }
+
+        /*================ Using feature queries.=================*/
+        .wrapper ul {
+            overflow: hidden;
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+        }
+        .wrapper li {
+            float: left;
+            width: calc(33.333333% - 20px);
+            margin: 0 10px 20px 10px;
+
+            border: 2px solid #07f727;
+            border-radius: 5px;
+            background-color: #a6b8c2ec;
+        }
+        /*I use an @supports rule to check for support of display: grid.*/
+        @supports (display: grid) {
+            .wrapper-2 ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin: 0;
+            }
+            .wrapper-2 li {
+                width: auto;
+                min-height: auto;
+                margin: 0;
+
+                border: 2px solid #67f70742;
+                border-radius: 5px;
+                background-color: #96c6d4dc;
+            }
+        }
+
+        /*=========== Vertical alignment in a table cell.==========*/
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        td {
+            padding: 0.5em;
+            font-family: monospace;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="media">
+        <div class="image"><img src="https://via.placeholder.com/150x150" alt="placeholder"></div>
+        <div class="text">This is a media object example. I am using floats for older browsers and grid for new ones.</div>
+    </div>
+    
+    <hr>
+    <h2>Using feature queries.</h2>
+    <div class="wrapper">
+        <ul>
+            <li class="card"><h2>One</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Two</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Three</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Four</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Five</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Six</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+        </ul>
+    </div>
+    
+    <hr>
+    <h2>I use an @supports rule to check for support of display: grid.</h2>
+    <div class="wrapper-2">
+        <ul>
+            <li class="card"><h2>One</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Two</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Three</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Four</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Five</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+            <li class="card"><h2>Six</h2>
+                <p>We can use CSS Grid to overwrite older methods.</p>
+            </li>
+        </ul>
+    </div> 
+    
+    <hr>
+    <h2>Vertical alignment in a table cell.</h2>
+    <table>
+        <tr>
+          <td style="vertical-align: baseline">baseline</td>
+          <td style="vertical-align: top">top</td>
+          <td style="vertical-align: middle">middle</td>
+          <td style="vertical-align: bottom">bottom</td>
+          <td>
+            <p>There is a theory which states that if ever anyone discovers exactly
+            what the Universe is for and why it is here, it will instantly disappear and
+            be replaced by something even more bizarre and inexplicable.</p>
+            <p>There is another theory which states that this has already happened.</p>
+          </td>
+        </tr>
+      </table>      
+  </body>
+</html>

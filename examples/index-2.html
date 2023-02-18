@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Formatting CSS boxes</title>
+    <link rel="stylesheet" href="styles-2.css">
+    <style></style>
+  </head>
+
+    <body>
+        <h1>Playing with box models</h1>
+
+        <div class="container">
+            <div class="box">Change my margin.</div>
+        </div>
+
+        <hr>
+        <h1>Margin collapsing</h1>
+
+        <div class="container">
+            <p class="one">I am paragraph one.</p>
+            <p class="two">I am paragraph two.</p>
+        </div>
+         
+        <hr>
+        <h1>Applying a top border</h1>
+        <div class="three">
+            This box has a border on the top side.
+        </div>
+
+        <hr>
+        <h1>border-style</h1>
+        <div class="four">
+            This is a box with a border around it.
+        </div>
+
+        <hr>
+        <h1>border-width</h1>
+        <div class="five">
+            This is a box with a border width ajusted around it.
+        </div>
+
+        <hr>
+        <h1>border-color</h1>
+        <div class="six">
+            This is a box with a border color ajusted around it.
+        </div>
+
+        <hr>
+        <h1>To set the width, style, or color of a single side.</h1>
+        <div class="container-3">
+            <div class="seven">Change my borders.</div>
+        </div>
+
+        <hr>
+        <h1>Using display: inline-block</h1>
+        <p>
+            I am a paragraph and this is a <span>span</span> inside that paragraph. A span is an inline element and so does not respect width and height.
+        </p> 
+
+        <hr>
+        <h2> Second e.g.: Using display: inline-block</h2> 
+        <nav>
+            <ul class="links-list">
+              <li><a href="">Link one</a></li>
+              <li><a href="">Link two</a></li>
+              <li><a href="">Link three</a></li>
+            </ul>
+        </nav>    
+        
+        <hr>
+        <h1>Background images</h1>
+        <div class="wrapper">
+            <div class="box a"></div>
+            <div class="box b"></div>
+        </div>
+
+        <hr>
+        <h2>Way to add Emoji symbols in your website.</h2>
+        <ul>
+            <li><a href="https://example.com">Website</a></li>
+            <li><a href="mailto:m.bluth@example.com">Email</a></li>
+            <li><a href="tel:+123456789">Phone</a></li>
+        </ul>
+        
+        <hr>
+        <h2>Examples: Setting background-repeat.</h2>
+            
+        <hr>
+        <!-- /* Add your samples above */ -->
+        <h1>The template Element</h1>
+
+        <p>Click the button below to display the hidden content from the template element.</p>
+
+        <button onclick="showContent()">Show hidden content</button>
+
+        <template>
+        <h2>Flower</h2>
+        <img src="./images/cute-puppy.png" width="250" height="204">
+        </template>
+
+        <script>
+        function showContent() {
+        var temp = document.getElementsByTagName("template")[0];
+        var clon = temp.content.cloneNode(true);
+        document.body.appendChild(clon);
+        }
+        </script>
+
+    </body>
+</html>

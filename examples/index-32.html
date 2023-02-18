@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Media Queries: width</title>
+    <style>
+      html {
+        font-size: 1em;
+        /* background-color: #ddd0b8; */
+      }
+
+      /*@media screen and (width: 600px) {
+        body {
+          color: red;
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        body {
+          color: green;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          color: blue;
+        }
+      }*/
+
+      /*Landscape orientation*/
+      /*@media (orientation: landscape) {
+            body {
+                color: rebeccapurple;
+            }
+        }*/
+
+        /*Use of pointing devices.*/
+        /* @media (hover: hover) {
+            body {
+                color: rebeccapurple;
+            }
+        } */
+
+        /*"and" logic in media queries*/
+        /* @media screen and (min-width: 600px) and (orientation: landscape) {
+            body {
+                color: blue;
+            }
+        } */
+
+        /*"or" logic in media queries*/
+        /* @media screen and (min-width: 600px), screen and (orientation: landscape) {
+            body {
+                color: blue;
+            }
+        } */
+
+        /*"not" logic in media queries*/
+        @media not all and (orientation: landscape) {
+            body {
+                color: blue;
+            }
+        }
+
+      /*==============Prefers-reduced-motion.====================*/
+        .animation {
+            animation: pulse 1s linear infinite both;
+            background-color: hotpink;
+        }
+
+            /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+        @media (prefers-reduced-motion) {
+            .animation {
+                animation-name: dissolve;
+            }
+        }
+
+        /* Minimum aspect ratio */
+        @media (min-aspect-ratio: 8/5) {
+            div {
+                background: #9af; /* blue */
+            }
+        }
+
+        /* Maximum aspect ratio */
+        @media (max-aspect-ratio: 3/2) {
+            div {
+                background: #9ff;  /* cyan */
+            }
+        }
+
+        /* Exact aspect ratio, put it at the bottom to avoid override*/
+        @media (aspect-ratio: 1/1) {
+            div {
+                background: #f9a; /* red */
+            }
+        }
+
+        /*CSS any-pointer.*/
+        input[type="checkbox"]:checked {
+            background: gray;
+        }
+
+        @media (any-pointer: fine) {
+            input[type="checkbox"] {
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                border: 1px solid blue;
+            }
+        }
+
+        @media (any-pointer: coarse) {
+            input[type="checkbox"] {
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                width: 30px;
+                height: 30px;
+                border: 2px solid red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    
+  <p>One November night in the year 1782, so the story runs, two brothers sat over their winter fire in the little French town of Annonay, watching the grey smoke-wreaths from the hearth curl up the wide chimney. Their names were Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted as possessing thoughtful minds and a deep interest in all scientific knowledge and new discovery.</p>
+  <p>Before that night—a memorable night, as it was to prove—hundreds of millions of people had watched the rising smoke-wreaths of their fires without drawing any special inspiration from the fact.”</p>
+
+  <hr>
+  <h2>CSS prefers-reduced-motion.</h2>
+  <div class="animation">animated box</div>
+
+  <hr>
+  <h2>CSS aspect-ratio.</h2>
+  <div id='inner'>
+    Watch this element as you resize your viewport's width and height.
+  </div>
+
+  <hr>
+  <h2>CSS any-pointer.</h2>
+  <input id="test" type="checkbox" />
+  <label for="test">Look at me!</label>
+
+</body>
+
+</html>
